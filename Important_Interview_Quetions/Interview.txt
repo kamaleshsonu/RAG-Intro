@@ -9,6 +9,8 @@ FAISS (Facebook AI Similarity Search) is an open-source library developed by Met
 3. What kind of data does FAISS store?
 4. Does FAISS store text?
 
+dfafdadfafadsf
+
 Answer
 
 No.
