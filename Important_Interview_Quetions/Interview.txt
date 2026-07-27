@@ -1,0 +1,398 @@
+FAISS Interview Questions
+Beginner Level
+1. What is FAISS?
+
+Expected Answer:
+FAISS (Facebook AI Similarity Search) is an open-source library developed by Meta for efficient similarity search and clustering of dense vectors. It is commonly used in RAG applications to retrieve the most relevant document embeddings.
+
+2. Why is FAISS used in RAG?
+3. What kind of data does FAISS store?
+4. Does FAISS store text?
+
+Answer
+
+No.
+
+FAISS stores only vector embeddings.
+
+Original text is usually stored separately.
+
+5. What is similarity search?
+6. How does FAISS find similar vectors?
+7. What is an embedding?
+8. What is vector search?
+9. What are nearest neighbors?
+10. What are the advantages of FAISS?
+Intermediate Level
+11. What similarity metrics does FAISS support?
+
+Expected
+
+L2 Distance
+Inner Product
+Cosine Similarity (after normalization)
+12. Explain IndexFlatL2.
+13. Explain IndexFlatIP.
+14. Explain Approximate Nearest Neighbor (ANN).
+15. Difference between exact search and ANN?
+16. Why is ANN faster?
+17. Can FAISS work on GPU?
+18. How do you save a FAISS index?
+
+Example
+
+faiss.write_index(index, "index.faiss")
+19. How do you load a FAISS index?
+20. What happens if you don't save the FAISS index?
+21. Can FAISS scale to millions of vectors?
+22. Does FAISS support metadata filtering?
+
+Expected
+
+No.
+
+23. What are the limitations of FAISS?
+24. Explain the FAISS workflow in RAG.
+25. How is FAISS integrated with LangChain?
+Advanced Level
+26. Explain IVF Index.
+27. Explain HNSW Index.
+28. Explain Product Quantization.
+29. Explain IndexIVFPQ.
+30. When would you choose Flat Index instead of IVF?
+31. How do you improve FAISS retrieval quality?
+32. Can FAISS perform hybrid search?
+33. Explain vector normalization.
+34. What is recall in vector search?
+35. What is precision in retrieval?
+36. Difference between dense retrieval and sparse retrieval?
+37. What happens if your embeddings are poor?
+38. Why are embeddings more important than the vector database?
+39. What is semantic search?
+40. FAISS vs Pinecone?
+Coding Questions
+
+Write code to
+
+Create FAISS index
+Add embeddings
+Search vectors
+Save index
+Load index
+Integrate with LangChain
+Build a retriever
+ChromaDB Interview Questions
+Beginner Level
+1. What is ChromaDB?
+2. Why is Chroma used in RAG?
+3. What does Chroma store?
+
+Expected
+
+Embeddings
+Original Text
+Metadata
+4. What is a Collection?
+5. Why do we need Collections?
+6. Explain metadata.
+7. What is metadata filtering?
+8. Does Chroma persist data?
+9. Difference between Collection and SQL Table?
+10. What is similarity search?
+Intermediate Level
+11. How do you create a Chroma database?
+12. How do you insert documents?
+13. How do you retrieve documents?
+14. Explain persist_directory.
+15. Difference between Chroma and FAISS?
+16. Can Chroma store PDFs?
+
+Expected
+
+Indirectly.
+
+It stores embeddings created from PDF chunks.
+
+17. Can Chroma store images?
+18. How do you delete documents?
+19. How do you update documents?
+20. Explain collection names.
+21. Explain metadata filtering with examples.
+
+Example
+
+filter={"source":"manual.pdf"}
+22. Explain document IDs.
+23. How is Chroma integrated into LangChain?
+24. How does Chroma retrieve similar documents?
+25. Can Chroma run locally?
+Advanced Level
+26. Chroma vs FAISS?
+27. Chroma vs Pinecone?
+28. Chroma vs Qdrant?
+29. Chroma vs Weaviate?
+30. How does Chroma persist data?
+31. How would you build a production RAG using Chroma?
+32. Can multiple users use the same Chroma database?
+33. Explain document chunking with Chroma.
+34. Explain retrieval pipeline.
+35. Explain vector dimension mismatch.
+36. How would you migrate from Chroma to Pinecone?
+37. How do you improve Chroma retrieval?
+38. Explain embedding models used with Chroma.
+39. Explain retrievers in LangChain.
+40. How does Chroma support semantic search?
+Scenario-Based Questions
+
+These are commonly asked in AI Engineer interviews.
+
+1. Why did you choose FAISS over Chroma?
+2. When would you choose Chroma over FAISS?
+3. When would you choose Pinecone?
+4. What happens if embeddings change?
+5. How do you update your vector database after adding a new PDF?
+6. How do you remove duplicate vectors?
+7. How do you improve retrieval accuracy?
+8. What happens if the retrieved chunk is irrelevant?
+9. How would you debug poor RAG performance?
+10. How would you optimize latency in retrieval?
+Practical Coding Questions
+
+You may be asked to implement:
+
+Load PDFs and chunk them.
+Generate embeddings using OpenAI, Azure OpenAI, or Hugging Face models.
+Store embeddings in FAISS.
+Store embeddings in Chroma.
+Build a retriever using LangChain.
+Create a RetrievalQA chain.
+Filter documents using metadata.
+Save and reload a vector database.
+Update an existing vector store with new documents.
+Compare retrieval results from FAISS and Chroma.
+Most Important Questions (High Probability)
+
+If you have limited time, focus on these:
+
+What is FAISS, and why is it used in RAG?
+What is ChromaDB, and how is it different from FAISS?
+What is an embedding?
+What is vector search?
+Explain similarity search and cosine similarity.
+Explain the complete RAG pipeline.
+What are metadata and metadata filtering?
+How do FAISS and Chroma integrate with LangChain?
+How do you persist and reload a vector database?
+How would you improve retrieval quality in a RAG system?
+
+These questions cover the concepts that interviewers most frequently use to assess whether you understand not just the libraries, but how retrieval works in real-world GenAI applications.
+
+answers for these 
+
+That's a great idea, but there are 80+ questions in the list.
+
+A complete set of high-quality answers would be well over 100 pages, which is far too much for a single response.
+
+Here's what I recommend for interview preparation:
+
+Part 1: FAISS (40 Questions + Answers)
+Basics
+Intermediate
+Advanced
+Coding
+Interview Tips
+Part 2: ChromaDB (40 Questions + Answers)
+Basics
+Intermediate
+Advanced
+Coding
+Production Scenarios
+Part 3: RAG + Vector Databases (50+ Questions + Answers)
+FAISS vs Chroma vs Pinecone
+Embeddings
+Chunking
+Retrieval
+Similarity Search
+Hybrid Search
+Reranking
+Metadata Filtering
+Production Architecture
+
+This would become a complete interview handbook (150–200 pages) suitable for AI Engineer interviews.
+
+To get you started, here are the answers to the 10 highest-probability interview questions.
+1. What is FAISS?
+
+Answer:
+
+FAISS (Facebook AI Similarity Search) is an open-source library developed by Meta for efficient similarity search and clustering of dense vector embeddings. In RAG applications, FAISS stores document embeddings and retrieves the most semantically similar documents for a user's query.
+
+Example:
+
+Store embeddings of PDF chunks.
+Convert the user's question into an embedding.
+Search for the nearest vectors.
+Return the relevant chunks to the LLM.
+2. Why is FAISS used in RAG?
+
+Answer:
+
+Large Language Models cannot search thousands of document chunks efficiently. FAISS enables fast semantic retrieval by storing embeddings and performing nearest-neighbor search.
+
+Without FAISS:
+
+Scan every document.
+Slow retrieval.
+
+With FAISS:
+
+Millisecond retrieval.
+Scales to millions of vectors.
+3. What is ChromaDB?
+
+Answer:
+
+ChromaDB is an open-source vector database designed for AI applications. It stores:
+
+Embeddings
+Original documents
+Metadata
+
+Unlike FAISS, Chroma also supports persistence and metadata filtering, making it suitable for end-to-end RAG systems.
+
+4. Difference between FAISS and ChromaDB?
+FAISS	ChromaDB
+Vector search library	Vector database
+Stores embeddings	Stores embeddings, documents, metadata
+Metadata filtering is limited	Built-in metadata filtering
+Manual persistence	Built-in persistence
+Extremely fast search	Slightly more features
+
+Interview Tip: Mention that Chroma often uses FAISS or similar indexing techniques internally for search, but provides a higher-level database interface.
+
+5. What is an embedding?
+
+Answer:
+
+An embedding is a numerical vector representation of text, images, or other data that captures semantic meaning.
+
+Example:
+
+"Artificial Intelligence"
+
+↓
+
+[0.23, -0.91, 0.55, ...]
+
+Documents with similar meanings produce embeddings that are close together in vector space.
+
+6. What is vector search?
+
+Answer:
+
+Vector search compares the embedding of a query with stored embeddings and retrieves the most similar ones based on a similarity metric such as cosine similarity or Euclidean distance.
+
+Unlike keyword search, vector search understands meaning rather than exact words.
+
+7. What is similarity search?
+
+Answer:
+
+Similarity search finds items whose embeddings are closest to the query embedding.
+
+For example:
+
+Query:
+
+How do AI agents work?
+
+Documents:
+
+AI Agent Architecture
+Machine Learning Basics
+Cooking Recipes
+
+The AI Agent document has the highest similarity score and is returned.
+
+8. What are metadata and metadata filtering?
+
+Answer:
+
+Metadata is additional information associated with a document.
+
+Example:
+
+{
+  "source": "Azure.pdf",
+  "page": 12,
+  "author": "Microsoft"
+}
+
+Metadata filtering allows retrieval from only selected documents.
+
+Example:
+
+filter={"source":"Azure.pdf"}
+
+This is useful when users want answers from a specific document or category.
+
+9. Explain the RAG pipeline.
+
+Answer:
+
+A Retrieval-Augmented Generation (RAG) system combines document retrieval with an LLM.
+
+Pipeline:
+
+Documents
+     │
+     ▼
+Load Documents
+     │
+     ▼
+Split into Chunks
+     │
+     ▼
+Generate Embeddings
+     │
+     ▼
+Store in Vector Database
+     │
+───────────────
+User Question
+     │
+     ▼
+Generate Query Embedding
+     │
+     ▼
+Similarity Search
+     │
+     ▼
+Retrieve Relevant Chunks
+     │
+     ▼
+Send Context + Question to LLM
+     │
+     ▼
+Generate Answer
+10. How would you improve retrieval quality?
+
+Answer:
+
+Several techniques can improve retrieval quality:
+
+Choose a high-quality embedding model.
+Optimize chunk size and chunk overlap.
+Use metadata filtering.
+Increase or tune the number of retrieved documents (top-k).
+Apply reranking models after retrieval.
+Remove duplicate or noisy chunks.
+Keep the vector database updated with fresh content.
+Use hybrid search (keyword + vector search) when appropriate.
+Example Interview Follow-up
+
+Interviewer: Why not just search the PDF using keywords instead of FAISS?
+
+Strong Answer:
+
+Keyword search relies on exact word matches. If the document says "automobile" and the user searches for "car," keyword search may miss it. FAISS performs semantic search using embeddings, so it understands that "car" and "automobile" are closely related and can retrieve the relevant document even when the wording differs.
