@@ -18,3 +18,51 @@
 | Parent/child retrieval           | ⚠️ Check                            |
 | RAG evaluation                   | ⚠️ Very important to check          |
 | Production RAG                   | ⚠️ Very important                   |
+
+
+
+
+
+
+
+
+
+
+
+Level 1: Basic RAG
+   ↓
+Level 2: Hybrid Search
+   ↓
+Level 3: Reranking
+   ↓
+Level 4: Query Rewriting
+   ↓
+Level 5: Multi-Query Retrieval
+   ↓
+Level 6: Contextual Compression
+   ↓
+Level 7: Parent-Child Retrieval
+   ↓
+Level 8: Graph RAG
+   ↓
+Level 9: Agentic RAG
+   ↓
+Level 10: Graph + Agentic RAG + Evaluation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
